@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>画面いっぱいのスライダー</title>
+		<link rel="stylesheet" href="../../splide/splide.min.css">
+		<link rel="stylesheet" href="../../common.css">
+		<link rel="stylesheet" href="./style.css">
+	</head>
+	<body>
+		<div id="js-splide" class="splide p-splide" role="group" aria-label="Splideの基本的なHTML">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide p-splide__slide"><img src="../../img/img-slide01.webp" alt="スライダー画像1。ビルの写真" width="1280" height="853"></li>
+					<li class="splide__slide p-splide__slide"><img src="../../img/img-slide02.webp" alt="スライダー画像2。ビルの写真" width="1280" height="853"></li>
+					<li class="splide__slide p-splide__slide"><img src="../../img/img-slide03.webp" alt="スライダー画像3。ビルの写真" width="1280" height="853"></li>
+				</ul>
+			</div>
+		</div>
+		<script src="../../splide/splide.min.js"></script>
+		<script>
+			new Splide( '#js-splide' ).mount();
+		</script>
+	</body>
+</html>

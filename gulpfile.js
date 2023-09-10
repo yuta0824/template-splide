@@ -11,7 +11,7 @@ const browserSync = require("browser-sync");
 
 // パスの定義
 const distBase = "./docs";
-const srcSass = "./scss/**/*.scss";
+const srcSass = "./scss/**/**/*.scss";
 const distFile = `${distBase}/**/*`;
 
 // Sassコンパイル

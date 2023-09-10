@@ -1,0 +1,7 @@
+.p-splide__slide {
+  max-height: 100vh;
+}
+
+.p-splide__slide img {
+  width: 100%;
+}
