@@ -1,0 +1,14 @@
+@use "../global" as g;
+
+.l-section {
+	padding: 80px 0;
+}
+
+.l-inner {
+	max-width: min(100% - g.$pd-sp * 2, 600px);
+	margin-inline: auto;
+
+	@include g.mq("md") {
+		max-width: min(100% - g.$pd-pc * 2, g.$layout-width-inner);
+	}
+}

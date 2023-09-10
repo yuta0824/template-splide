@@ -1,0 +1,64 @@
+// フォント
+//--------------------------
+$ff-base: Helvetica Neue, Arial, Hiragino Sans, Hiragino Kaku Gothic ProN,
+	BIZ UDPGothic, Meiryo, sans-serif;
+$ff-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+	monospace;
+$fz-base: 1rem;
+$fw-base: 400;
+$lh-base: 2;
+$ls-base: 0.08em;
+
+// 色
+//---------------------
+$cr-main: #001f74;
+$cr-accent: #e2cd7f;
+$cr-bg: #fff;
+$cr-bg-gray: #e6e6e6;
+$cr-text: #333;
+$cr-text-link: #3131ff;
+
+// レイアウトサイズ
+//--------------------------
+$layout-width-inner: 1060px;
+$breakpoint-size: (
+	"sm": 576,
+	"md": 768,
+	"lg": 1060,
+	"xl": 1280,
+	"xxl": 1440,
+);
+
+// ブレークポイント (PC基準)
+//---------------------
+$breakpoints: (
+	sm: "(min-width: #{map-get($breakpoint-size,'sm')}px)",
+	md: "(min-width: #{map-get($breakpoint-size,'md')}px)",
+	lg: "(min-width: #{map-get($breakpoint-size,'lg')}px)",
+	xl: "(min-width: #{map-get($breakpoint-size,'xl')}px)",
+	xxl: "(min-width: #{map-get($breakpoint-size,'xxl')}px)",
+	"hover": "(hover: hover)",
+);
+
+// ヘッダー高さ
+//---------------------
+$header-height-pc: 100px;
+$header-height-sp: 80px;
+
+// 重なり順
+//---------------------
+$layer: (
+	loading: 300,
+	modal: 100,
+	drawer: 40,
+	floating: 30,
+	header: 20,
+	footer: 10,
+	default: 1,
+	bg: -10,
+);
+
+// 余白
+//---------------------
+$pd-pc: 50px;
+$pd-sp: 14px;

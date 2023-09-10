@@ -1,0 +1,27 @@
+@use "../global" as g;
+
+.p-nav-top {
+	min-width: 250px;
+	padding: 20px 60px;
+	margin-top: 1em;
+	text-align: center;
+	background-color: g.$cr-bg-gray;
+	border-radius: 4px;
+}
+
+.p-nav-top__title {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.p-nav-top__lists {
+	margin-top: 0.5em;
+}
+
+.p-nav-top__list {
+}
+.p-nav-top__link {
+	display: inline-block;
+	padding: 0.2em 0;
+	text-decoration: underline;
+}
