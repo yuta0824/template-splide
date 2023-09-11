@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>オーバーフローファーストビュー | テキストカラー変化</title>
+	<link rel="stylesheet" href="../assets/splide/splide.min.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+	<div class="p-fv-fixed">
+		<div id="js-splide" class="splide p-fv-fixed__img" role="group" aria-label="Splideの基本的なHTML">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide js-slide-item" data-text-color="#fff">
+						<img src="../assets/img/img-slide04.webp" alt="スライダー画像1。暗いビルの写真" width="1280" height="853" />
+					</li>
+					<li class="splide__slide js-slide-item" data-text-color="#000">
+						<img src="../assets/img/img-slide05.webp" alt="スライダー画像2。明るいビルの写真" width="1280" height="853" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="p-fv-fixed__inner">
+			<h2 id="js-text" class="p-fv-fixed__head p-fv-fixed__head--transition-color">東京サンプル株式会社</h2>
+		</div>
+	</div>
+	<script src="../assets/splide/splide.min.js"></script>
+	<script>
+		const splide = new Splide('#js-splide', {
+			updateOnMove: true,
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			resetProgress: true,
+			speed: 2500,
+			interval: 4000,
+			autoplay: true,
+			type: 'loop',
+			height: '100vh',
+			fixedWidth: "80%",
+			gap: "2%",
+			focus: "center",
+		});
+
+		splide.on('active', () => {
+			const activeSlide = document.querySelector('.js-slide-item.is-active');
+			const customColor = activeSlide.getAttribute('data-text-color');
+			const jsText = document.querySelector('#js-text');
+			jsText.style.color = customColor;
+		});
+		splide.mount();
+	</script>
+</body>
+
+</html>
