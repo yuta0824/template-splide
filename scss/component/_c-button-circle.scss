@@ -1,0 +1,75 @@
+$anm-time: 1.6s;
+
+.c-button-circle {
+	position: relative;
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	overflow: hidden;
+	line-height: 1;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 4px #031075;
+	opacity: 1 !important;
+	transform: scale(1) !important;
+}
+
+.c-button-circle__cover1 {
+	left: 50%;
+
+	&::before {
+		width: 100%;
+		height: 200%;
+		background: #fff;
+		transform-origin: 0 25%;
+	}
+}
+.c-button-circle__cover2 {
+	left: 0;
+}
+
+.c-button-circle__cover2:before {
+	left: -10%;
+	width: 110%;
+	height: 120%;
+	background: #fff;
+	transform-origin: 100% 40%;
+}
+
+.c-button-circle__cover1,
+.c-button-circle__cover2 {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: "";
+	}
+}
+
+.c-button-circle {
+	&.is-active {
+		.c-button-circle__cover1::before {
+			animation: draw $anm-time linear forwards;
+		}
+
+		.c-button-circle__cover2:before {
+			animation: draw $anm-time ease-out $anm-time forwards;
+		}
+	}
+}
+
+@keyframes draw {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+}

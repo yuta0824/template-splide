@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>フルレイアウトファーストビュー | サークルアニメーションページネーション</title>
+	<link rel="stylesheet" href="../assets/splide/splide.min.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body class="l-fade-open">
+	<div class="p-fv-fixed">
+		<div id="js-splide" class="splide p-fv-fixed__img" role="group" aria-label="Splideの基本的なHTML">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide">
+						<img src="../assets/img/img-slide01.webp" alt="スライダー画像1。ビルの写真" width="1280" height="853" />
+					</li>
+					<li class="splide__slide">
+						<img src="../assets/img/img-slide02.webp" alt="スライダー画像2。ビルの写真" width="1280" height="853" />
+					</li>
+					<li class="splide__slide">
+						<img src="../assets/img/img-slide03.webp" alt="スライダー画像3。ビルの写真" width="1280" height="853" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="p-fv-fixed__inner">
+			<h2 class="p-fv-fixed__head">東京サンプル株式会社</h2>
+			<p class="p-fv-fixed__text">テクノロジーで未来を形に。<br>ITの未来、私たちの手に。</p>
+		</div>
+	</div>
+
+	<script src="../assets/splide/splide.min.js"></script>
+	<script src="../assets/js/common.js"></script>
+	<script>
+		new Splide(".splide", {
+			arrows: false,
+			pauseOnHover: false,
+			pauseOnFocus: false,
+			resetProgress: true,
+			type: 'loop',
+			height: '100vh',
+			perPage: 1,
+			autoplay: true,
+			interval: 3000,
+			classes: {
+				pagination: 'splide__pagination p-circleAnm-pagination',
+				page: 'splide__pagination__page p-circleAnm-pagination__item c-button-circle js-button-circle',
+			},
+		}).mount();
+
+		window.addEventListener("load", function () {
+			const paginations = document.querySelectorAll(".js-button-circle")
+			for (let pagination of paginations) {
+				const cover1 = document.createElement("span");
+				const cover2 = document.createElement("span");
+				cover1.classList.add("c-button-circle__cover1");
+				cover2.classList.add("c-button-circle__cover2");
+				pagination.appendChild(cover1);
+				pagination.appendChild(cover2);
+			}
+		});
+	</script>
+</body>
+
+</html>

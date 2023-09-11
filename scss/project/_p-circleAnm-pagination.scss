@@ -1,0 +1,11 @@
+.p-circleAnm-pagination {
+	gap: 10px;
+	counter-reset: pagination-num;
+}
+
+.p-circleAnm-pagination__item::after {
+	position: relative;
+	z-index: 2;
+	content: counter(pagination-num);
+	counter-increment: pagination-num;
+}
