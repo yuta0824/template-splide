@@ -154,6 +154,14 @@ button {
   text-decoration: underline;
 }
 
+.p-splide-default {
+  max-height: 100vh;
+}
+
+.p-splide-default img {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
   .l-inner {
     max-width: min(100% - 100px, 1060px);
