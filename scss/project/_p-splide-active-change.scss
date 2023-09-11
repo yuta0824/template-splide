@@ -1,15 +1,12 @@
 @use "../global" as g;
 
-.p-splide-active-change {
-}
-
 .p-splide-active-change__slide {
-	width: 150px;
-	height: 250px;
+	width: 180px;
+	height: 180px;
 
-	&.is-active {
-		width: 500px;
-		background-size: 100% auto;
+	@include g.mq("md") {
+		width: 250px;
+		height: 250px;
 	}
 }
 
@@ -19,11 +16,14 @@
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: center center;
-	background-size: 100px 100px;
-	transition: width 0.3s;
+	background-size: 50px 50px;
+
+	@include g.mq("md") {
+		background-size: 80px 80px;
+	}
 
 	.is-active > & {
-		background-size: 100%;
+		background-size: 100% auto;
 	}
 }
 

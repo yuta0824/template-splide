@@ -223,6 +223,16 @@ button {
   padding: 100px 0;
 }
 
+.p-fv-active-change__inner {
+  margin-inline: auto;
+  max-width: 1280px;
+}
+
+.p-fv-active-change__head {
+  font-size: 18px;
+  text-align: center;
+}
+
 .p-fv-fixed {
   height: max(100vh, 400px);
   position: relative;
@@ -375,27 +385,21 @@ button {
 }
 
 .p-splide-active-change__slide {
-  height: 250px;
-  width: 150px;
-}
-
-.p-splide-active-change__slide.is-active {
-  background-size: 100% auto;
-  width: 500px;
+  height: 180px;
+  width: 180px;
 }
 
 .p-splide-active-change__item {
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 100px 100px;
+  background-size: 50px 50px;
   height: 100%;
-  transition: width 0.3s;
   width: 100%;
 }
 
 .is-active > .p-splide-active-change__item {
-  background-size: 100%;
+  background-size: 100% auto;
 }
 
 .p-splide-active-change__item--wordpress {
@@ -485,6 +489,19 @@ button {
 @media (min-width: 768px) {
   .l-inner {
     max-width: min(100% - 100px, 1060px);
+  }
+
+  .p-fv-active-change__head {
+    font-size: 30px;
+  }
+
+  .p-splide-active-change__slide {
+    height: 250px;
+    width: 250px;
+  }
+
+  .p-splide-active-change__item {
+    background-size: 80px 80px;
   }
 
   .u-hidden-pc {

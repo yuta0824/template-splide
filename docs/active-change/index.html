@@ -11,11 +11,9 @@
 
 <body>
 	<div class="p-fv-active-change">
-		<div class="l-inner">
-			<div class="p-fv-active-change__inner">
-				<h1 class="p-fv-active-change__head">東京サンプル株式会社 - サービス一覧</h1>
-			</div>
-			<div id="js-splide" class="splide p-fv-active-change__slides p-splide-active-change" role="group" aria-label="Splideの基本的なHTML">
+		<div class="p-fv-active-change__inner">
+			<h1 class="p-fv-active-change__head">東京サンプル株式会社<br>サービス一覧</h1>
+			<div id="js-splide" class="splide p-splide-active-change" role="group" aria-label="Splideの基本的なHTML">
 				<div class="splide__track">
 					<ul class="splide__list">
 						<li class="splide__slide p-splide-active-change__slide">
@@ -43,19 +41,12 @@
 			perMove: 1,
 			autoWidth: true,
 			interval: 3000,
-			speed: 1000,
+			speed: 500,
 			cloneStatus: false,
 			updateOnMove: true,
-			gap: 10,
+			focus: 'center',
+			trimSpace: false,
 		}).mount();
-
-		const splide = new Splide('#js-splide');
-		console.log(splide);
-
-		// Splideの初期化が終わった際、またはスライドが切り替わる際にバーの長さを更新する
-		splide.on('mounted move', function () {
-			console.log("更新ƒƒƒ");
-		});
 	</script>
 </body>
 
