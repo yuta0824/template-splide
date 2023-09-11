@@ -2,26 +2,35 @@
 
 .p-nav-top {
 	min-width: 250px;
-	padding: 20px 60px;
+	padding: 20px 60px 40px;
 	margin-top: 1em;
-	text-align: center;
-	background-color: g.$cr-bg-gray;
+	background-color: g.$cr-gray-light;
 	border-radius: 4px;
 }
 
 .p-nav-top__title {
-	font-size: 22px;
+	font-size: 26px;
+	font-weight: 700;
+}
+.p-nav-top__subTitle {
+	font-size: 18px;
 	font-weight: 700;
 }
 
 .p-nav-top__lists {
+	margin-top: 1em;
+}
+
+.p-nav-top__subLists {
 	margin-top: 0.5em;
 }
 
 .p-nav-top__list {
 }
+
 .p-nav-top__link {
 	display: inline-block;
 	padding: 0.2em 0;
 	text-decoration: underline;
+	color: g.$cr-text-link;
 }

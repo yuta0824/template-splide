@@ -2,7 +2,7 @@
 
 // vw計算
 @function vw($windows_width, $font_size) {
-	@return $font_size / $windows_width * 100vw;
+	@return calc($font_size / $windows_width * 100vw);
 }
 
 // rem計算
