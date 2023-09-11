@@ -1,12 +1,11 @@
 @use "../global" as g;
 
-.p-fv-full {
+.p-fv-fixed {
 	position: relative;
 	width: 100%;
 	height: max(100vh, 400px);
 }
-
-.p-fv-full__img {
+.p-fv-fixed__img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -20,21 +19,18 @@
 		object-fit: cover;
 	}
 }
-
-.p-fv-full__inner {
+.p-fv-fixed__inner {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-
-.p-fv-full__head {
+.p-fv-fixed__head {
 	color: #fff;
 	font-size: g.vw(768, 40);
 	white-space: nowrap;
 }
-
-.p-fv-full__text {
+.p-fv-fixed__text {
 	color: #fff;
 	font-size: g.vw(768, 20);
 }

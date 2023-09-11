@@ -130,19 +130,65 @@ button {
   font-weight: 700;
 }
 
-.p-fv-full {
+.p-fv-fixed {
+  height: max(100vh, 400px);
   position: relative;
+  width: 100%;
 }
 
-.p-fv-full__img {
+.p-fv-fixed__img {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.p-fv-fixed__img img {
   -o-object-fit: cover;
-  max-height: 100vh;
-  min-height: 400px;
+  height: 100%;
   object-fit: cover;
   width: 100%;
 }
 
+.p-fv-fixed__inner {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-fv-fixed__head {
+  color: #fff;
+  font-size: 5.2083333333vw;
+  white-space: nowrap;
+}
+
+.p-fv-fixed__text {
+  color: #fff;
+  font-size: 2.6041666667vw;
+}
+
+.p-fv-full {
+  height: max(100vh, 400px);
+  position: relative;
+  width: 100%;
+}
+
+.p-fv-full__img {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
 .p-fv-full__img img {
+  -o-object-fit: cover;
+  height: 100%;
+  object-fit: cover;
   width: 100%;
 }
 
