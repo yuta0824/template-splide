@@ -1,0 +1,16 @@
+@use "../global" as g;
+
+.p-splide-zoomup {
+}
+
+.p-splide-zoomup__slide {
+	img {
+		transition: scale 6s;
+	}
+
+	&.is-active {
+		img {
+			scale: (1.1);
+		}
+	}
+}

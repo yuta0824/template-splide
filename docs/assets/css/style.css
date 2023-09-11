@@ -298,6 +298,46 @@ button {
   font-size: 2.6041666667vw;
 }
 
+.p-fv-zoomup {
+  height: max(100vh, 400px);
+  position: relative;
+  width: 100%;
+}
+
+.p-fv-zoomup__img {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.p-fv-zoomup__img img {
+  -o-object-fit: cover;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.p-fv-zoomup__inner {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-fv-zoomup__head {
+  color: #fff;
+  font-size: 5.2083333333vw;
+  white-space: nowrap;
+}
+
+.p-fv-zoomup__text {
+  color: #fff;
+  font-size: 2.6041666667vw;
+}
+
 .p-nav-top {
   background-color: #eeeeee;
   border-radius: 4px;
@@ -336,6 +376,14 @@ button {
 
 .p-splide-fv img {
   width: 100%;
+}
+
+.p-splide-zoomup__slide img {
+  transition: scale 6s;
+}
+
+.p-splide-zoomup__slide.is-active img {
+  scale: 1.1;
 }
 
 @media (min-width: 768px) {

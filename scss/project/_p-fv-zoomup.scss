@@ -1,12 +1,12 @@
 @use "../global" as g;
 
-.p-fv-fixed {
+.p-fv-zoomup {
 	position: relative;
 	width: 100%;
 	height: max(100vh, 400px);
 }
 
-.p-fv-fixed__img {
+.p-fv-zoomup__img {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -21,20 +21,20 @@
 	}
 }
 
-.p-fv-fixed__inner {
+.p-fv-zoomup__inner {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.p-fv-fixed__head {
+.p-fv-zoomup__head {
 	font-size: g.vw(768, 40);
 	color: #fff;
 	white-space: nowrap;
 }
 
-.p-fv-fixed__text {
+.p-fv-zoomup__text {
 	font-size: g.vw(768, 20);
 	color: #fff;
 }
