@@ -1,0 +1,60 @@
+@use "../global" as g;
+
+.p-splide-active-change {
+}
+
+.p-splide-active-change__slide {
+	width: 150px;
+	height: 250px;
+
+	&.is-active {
+		width: 500px;
+		background-size: 100% auto;
+	}
+}
+
+.p-splide-active-change__item {
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100px 100px;
+	transition: width 0.3s;
+
+	.is-active > & {
+		background-size: 100%;
+	}
+}
+
+.p-splide-active-change__item--wordpress {
+	background-image: url(../img/icon-wordpress.svg);
+
+	.is-active > & {
+		background-image: url(../img/banner-wordpress.svg);
+	}
+}
+
+.p-splide-active-change__item--html {
+	background-image: url(../img/icon-html.svg);
+
+	.is-active > & {
+		background-image: url(../img/banner-html.svg);
+	}
+}
+
+.p-splide-active-change__item--website {
+	background-image: url(../img/icon-website.svg);
+
+	.is-active > & {
+		background-image: url(../img/banner-website.svg);
+	}
+}
+
+.p-splide-active-change__item--conserve {
+	background-image: url(../img/icon-conserve.svg);
+
+	.is-active > & {
+		background-image: url(../img/banner-conserve.svg);
+	}
+}

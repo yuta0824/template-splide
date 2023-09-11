@@ -218,6 +218,11 @@ button {
   z-index: 2;
 }
 
+.p-fv-active-change {
+  background: #eeeeee;
+  padding: 100px 0;
+}
+
 .p-fv-fixed {
   height: max(100vh, 400px);
   position: relative;
@@ -369,6 +374,62 @@ button {
   display: inline-block;
 }
 
+.p-splide-active-change__slide {
+  height: 250px;
+  width: 150px;
+}
+
+.p-splide-active-change__slide.is-active {
+  background-size: 100% auto;
+  width: 500px;
+}
+
+.p-splide-active-change__item {
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  height: 100%;
+  transition: width 0.3s;
+  width: 100%;
+}
+
+.is-active > .p-splide-active-change__item {
+  background-size: 100%;
+}
+
+.p-splide-active-change__item--wordpress {
+  background-image: url(../img/icon-wordpress.svg);
+}
+
+.is-active > .p-splide-active-change__item--wordpress {
+  background-image: url(../img/banner-wordpress.svg);
+}
+
+.p-splide-active-change__item--html {
+  background-image: url(../img/icon-html.svg);
+}
+
+.is-active > .p-splide-active-change__item--html {
+  background-image: url(../img/banner-html.svg);
+}
+
+.p-splide-active-change__item--website {
+  background-image: url(../img/icon-website.svg);
+}
+
+.is-active > .p-splide-active-change__item--website {
+  background-image: url(../img/banner-website.svg);
+}
+
+.p-splide-active-change__item--conserve {
+  background-image: url(../img/icon-conserve.svg);
+}
+
+.is-active > .p-splide-active-change__item--conserve {
+  background-image: url(../img/banner-conserve.svg);
+}
+
 .p-splide-fv {
   max-height: 100vh;
 }
@@ -385,9 +446,53 @@ button {
   scale: 1.1;
 }
 
+.u-hidden-sp {
+  display: none;
+}
+
+.u-hidden-visually {
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.u-mt-0 {
+  margin-top: 0 !important;
+}
+
+.u-mt-10 {
+  margin-top: 10px !important;
+}
+
+.u-mt-20 {
+  margin-top: 20px !important;
+}
+
+.u-mt-30 {
+  margin-top: 30px !important;
+}
+
+.u-mt-40 {
+  margin-top: 40px !important;
+}
+
 @media (min-width: 768px) {
   .l-inner {
     max-width: min(100% - 100px, 1060px);
+  }
+
+  .u-hidden-pc {
+    display: none !important;
+  }
+
+  .u-hidden-sp {
+    display: block;
   }
 }
 

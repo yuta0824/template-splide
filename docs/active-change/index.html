@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>フルレイアウトファーストビュー | アクティブアイテム変換</title>
+	<link rel="stylesheet" href="../assets/splide/splide.min.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+	<div class="p-fv-active-change">
+		<div class="l-inner">
+			<div class="p-fv-active-change__inner">
+				<h1 class="p-fv-active-change__head">東京サンプル株式会社 - サービス一覧</h1>
+			</div>
+			<div id="js-splide" class="splide p-fv-active-change__slides p-splide-active-change" role="group" aria-label="Splideの基本的なHTML">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide p-splide-active-change__slide">
+							<div class="p-splide-active-change__item p-splide-active-change__item--wordpress"><span class="u-hidden-visually">WordPress</span></div>
+						</li>
+						<li class="splide__slide p-splide-active-change__slide">
+							<div class="p-splide-active-change__item p-splide-active-change__item--html"><span class="u-hidden-visually">HTMLコーディング</span></div>
+						</li>
+						<li class="splide__slide p-splide-active-change__slide">
+							<div class="p-splide-active-change__item p-splide-active-change__item--website"><span class="u-hidden-visually">Webサイト制作</span></div>
+						</li>
+						<li class="splide__slide p-splide-active-change__slide">
+							<div class="p-splide-active-change__item p-splide-active-change__item--conserve"><span class="u-hidden-visually">保守・管理</span></div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../assets/splide/splide.min.js"></script>
+	<script>
+		new Splide("#js-splide", {
+			type: 'loop',
+			autoplay: true,
+			perMove: 1,
+			autoWidth: true,
+			interval: 3000,
+			speed: 1000,
+			cloneStatus: false,
+			updateOnMove: true,
+			gap: 10,
+		}).mount();
+
+		const splide = new Splide('#js-splide');
+		console.log(splide);
+
+		// Splideの初期化が終わった際、またはスライドが切り替わる際にバーの長さを更新する
+		splide.on('mounted move', function () {
+			console.log("更新ƒƒƒ");
+		});
+	</script>
+</body>
+
+</html>
