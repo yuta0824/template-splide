@@ -1,0 +1,26 @@
+.u-anm-text-in {
+	display: flex;
+	overflow: hidden;
+	white-space: nowrap;
+
+	span {
+		display: inline-block;
+		transform: translateY(105%);
+	}
+}
+
+.splide__slide.is-active .u-anm-text-in {
+	span {
+		@for $i from 1 to 18 {
+			&:nth-child(#{$i}) {
+				animation: fadeInText 1s ease 0.1 * $i + s forwards;
+			}
+		}
+	}
+}
+
+@keyframes fadeInText {
+	100% {
+		transform: translateY(0);
+	}
+}

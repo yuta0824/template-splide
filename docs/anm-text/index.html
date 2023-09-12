@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>フルレイアウトファーストビュー | テキストアニメーション</title>
+	<link rel="stylesheet" href="../assets/splide/splide.min.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+	<div id="js-splide" class="splide" role="group" aria-label="Splideの基本的なHTML">
+		<div class="splide__track">
+			<ul class="splide__list">
+				<li class="splide__slide js-slide-item">
+					<div class="p-fv-full">
+						<div class="p-fv-full__img">
+							<img src="../assets/img/img-slide01.webp" alt="スライダー画像1。ビルの写真" width="1280" height="853" />
+						</div>
+						<div class="p-fv-full__inner">
+							<h2 class="p-fv-full__head">東京サンプル株式会社</h2>
+							<p class="p-fv-full__text u-anm-text-in js-anm-text">テクノロジーで未来を形に。</p>
+						</div>
+					</div>
+				</li>
+				<li class="splide__slide js-slide-item">
+					<div class="p-fv-full">
+						<div class="p-fv-full__img">
+							<img src="../assets/img/img-slide02.webp" alt="スライダー画像2。ビルの写真" width="1280" height="853" />
+						</div>
+						<div class="p-fv-full__inner">
+							<h2 class="p-fv-full__head">大阪サンプル株式会社</h2>
+							<p class="p-fv-full__text u-anm-text-in js-anm-text">ITでくらしを豊かに</p>
+						</div>
+					</div>
+				</li>
+				<li class="splide__slide js-slide-item">
+					<div class="p-fv-full">
+						<div class="p-fv-full__img">
+							<img src="../assets/img/img-slide03.webp" alt="スライダー画像3。ビルの写真" width="1280" height="853" />
+						</div>
+						<div class="p-fv-full__inner">
+							<h2 class="p-fv-full__head">福岡サンプル株式会社</h2>
+							<p class="p-fv-full__text u-anm-text-in js-anm-text">スライドでテキストアニメーション</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="../assets/splide/splide.min.js"></script>
+	<script>
+		// 1文字づつspanで囲む処理
+		document.addEventListener("DOMContentLoaded", function () {
+			const textContainers = document.querySelectorAll(".js-anm-text");
+			for (let textContainer of textContainers) {
+				const text = textContainer.textContent.trim();
+				const textArray = text.split("");
+				const spannedText = textArray.map((char) => {
+					const span = document.createElement("span");
+					span.textContent = char;
+					return span;
+				});
+				textContainer.innerHTML = "";
+				spannedText.forEach((span) => {
+					textContainer.appendChild(span);
+				});
+			}
+		});
+
+		// スライダーの定義
+		const splide = new Splide('#js-splide', {
+			updateOnMove: true,
+			pauseOnHover: true,
+			pauseOnFocus: true,
+			resetProgress: true,
+			speed: 2500,
+			interval: 6000,
+			autoplay: true,
+			type: 'fade',
+			height: '100vh',
+			fixedWidth: "100%",
+			focus: "center",
+		});
+		splide.mount();
+	</script>
+</body>
+
+</html>
