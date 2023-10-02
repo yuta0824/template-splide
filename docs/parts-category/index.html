@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>フルレイアウトファーストビュー | コンテンツスライド</title>
+	<link rel="stylesheet" href="../assets/splide/splide.min.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+	<section class="l-section">
+		<div class="l-inner">
+			<h1 class="c-title">カテゴリー</h1>
+			<nav class="p-nav-category" aria-label="ブログカテゴリーのナビゲーション">
+				<div id="js-splide" class="splide p-splide-category" role="group" aria-label="Splideの基本的なHTML">
+					<div class="splide__track p-splide-category__track">
+						<ul class="splide__list p-splide-category__list">
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">HTML</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">CSS</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">JavaScript</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">jQuery</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">WordPress</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">Gulp</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">VS Code</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">Mac</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">MAMP</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">開発環境</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</section>
+
+
+
+	<script src="../assets/splide/splide.min.js"></script>
+	<script>
+		new Splide("#js-splide", {
+			type: 'slide',
+			perPage: 1,
+			autoWidth: true,
+			gap: "20px",
+			pagination: false,
+			classes: {
+				arrows: 'splide__arrows p-arrows-category',
+				arrow: 'splide__arrow p-arrows-category__arrow',
+				prev: 'splide__arrow--prev p-arrows-category__arrow--prev',
+				next: 'splide__arrow--next p-arrows-category__arrow--next',
+			},
+		}).mount();
+
+
+		document.addEventListener('DOMContentLoaded', function () {
+			var splide = new Splide('.splide').mount();
+
+			splide.on('move', function () {
+				var sliderElement = document.querySelector('.splide__track');
+
+				// スライダーが最初のスライドに到達した場合
+				if (splide.index === 0) {
+					sliderElement.classList.add('reached-start');
+				} else {
+					sliderElement.classList.remove('reached-start');
+				}
+
+				// スライダーが最後のスライドに到達した場合
+				if (splide.index === (splide.length - 1)) {
+					sliderElement.classList.add('reached-end');
+				} else {
+					sliderElement.classList.remove('reached-end');
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>

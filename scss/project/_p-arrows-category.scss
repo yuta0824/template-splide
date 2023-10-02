@@ -1,0 +1,14 @@
+@use "../global" as g;
+
+.p-arrows-category {
+}
+.p-arrows-category__arrow {
+	&:disabled {
+		opacity: 0;
+	}
+}
+.p-arrows-category__arrow--prev {
+}
+.p-arrows-category__arrow--next {
+
+}

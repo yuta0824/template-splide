@@ -1,0 +1,36 @@
+@use "../global" as g;
+
+.p-splide-category {
+}
+
+.p-splide-category__track {
+	position: relative;
+
+	&::after,
+	&::before {
+		pointer-events: none;
+		content: "";
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100px;
+		height: 100%;
+		z-index: 2;
+	}
+
+	&::before {
+		left: 0;
+		background: linear-gradient(to right, #fff 55%, transparent);
+	}
+
+	&::after {
+		right: 0;
+		background: linear-gradient(to left, #fff 55%, transparent);
+	}
+}
+
+.p-splide-category__list {
+}
+
+.p-splide-category__slide {
+}
