@@ -11,4 +11,6 @@
 	font-weight: 700;
 	line-height: 1;
 	transition: border 0.3s;
+
+	@include g.hover;
 }

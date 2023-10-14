@@ -45,6 +45,15 @@
 								<a href="#" class="c-category">MAMP</a>
 							</li>
 							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">React</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">Vue</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
+								<a href="#" class="c-category">Figma</a>
+							</li>
+							<li class="splide__slide p-splide-category__slide">
 								<a href="#" class="c-category">開発環境</a>
 							</li>
 						</ul>
@@ -53,17 +62,17 @@
 			</nav>
 		</div>
 	</section>
-
-
-
 	<script src="../assets/splide/splide.min.js"></script>
 	<script>
-		new Splide("#js-splide", {
+		const splide = new Splide("#js-splide", {
 			type: 'slide',
 			perPage: 1,
 			autoWidth: true,
+			updateOnMove: true,
 			gap: "20px",
 			pagination: false,
+			omitEnd: true,
+			focus: "left",
 			classes: {
 				arrows: 'splide__arrows p-arrows-category',
 				arrow: 'splide__arrow p-arrows-category__arrow',
@@ -71,29 +80,6 @@
 				next: 'splide__arrow--next p-arrows-category__arrow--next',
 			},
 		}).mount();
-
-
-		document.addEventListener('DOMContentLoaded', function () {
-			var splide = new Splide('.splide').mount();
-
-			splide.on('move', function () {
-				var sliderElement = document.querySelector('.splide__track');
-
-				// スライダーが最初のスライドに到達した場合
-				if (splide.index === 0) {
-					sliderElement.classList.add('reached-start');
-				} else {
-					sliderElement.classList.remove('reached-start');
-				}
-
-				// スライダーが最後のスライドに到達した場合
-				if (splide.index === (splide.length - 1)) {
-					sliderElement.classList.add('reached-end');
-				} else {
-					sliderElement.classList.remove('reached-end');
-				}
-			});
-		});
 	</script>
 </body>
 

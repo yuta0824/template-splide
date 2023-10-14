@@ -3,12 +3,49 @@
 .p-arrows-category {
 }
 .p-arrows-category__arrow {
+	background: none;
+	opacity: 1;
+
+	&:hover:not(:disabled) {
+		opacity: 1;
+	}
+
+	svg {
+		border-radius: 50%;
+		background: g.$cr-gray;
+		fill: rgb(0, 0, 0);
+		padding: 0.5em;
+		height: 2.2em;
+		width: 2.2em;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 200%;
+		height: 150%;
+		z-index: -1;
+	}
+
 	&:disabled {
 		opacity: 0;
+		display: none;
 	}
 }
 .p-arrows-category__arrow--prev {
+	left: 0;
+
+	&::after {
+		background: linear-gradient(to right, #fff 55%, transparent);
+	}
 }
 .p-arrows-category__arrow--next {
+	right: 0;
 
+	&::after {
+		background: linear-gradient(to left, #fff 55%, transparent);
+	}
 }
