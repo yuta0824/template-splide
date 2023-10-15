@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>滑らかに流れ続けるスライダー</title>
+	<link rel="stylesheet" href="../assets/splide/splide.min.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+	<section class="l-section">
+		<div class="l-inner">
+			<h1 class="c-title">カテゴリー</h1>
+		</div>
+		<div id="js-splide" class="splide p-splide-infinity" role="group" aria-label="Splideの基本的なHTML">
+			<div class="splide__track">
+				<ul class="splide__list">
+					<li class="splide__slide p-splide-infinity__slide">
+						<img src="../assets/img/img-slide01.webp" alt="ビル" width="1280" height="853" loading="lazy"
+							decoding="async">
+					</li>
+					<li class="splide__slide p-splide-infinity__slide">
+						<img src="../assets/img/img-slide02.webp" alt="ビル" width="1280" height="853" loading="lazy"
+							decoding="async">
+					</li>
+					<li class="splide__slide p-splide-infinity__slide">
+						<img src="../assets/img/img-slide03.webp" alt="ビル" width="1280" height="853" loading="lazy"
+							decoding="async">
+					</li>
+					<li class="splide__slide p-splide-infinity__slide">
+						<img src="../assets/img/img-slide04.webp" alt="ビル" width="1280" height="853" loading="lazy"
+							decoding="async">
+					</li>
+					<li class="splide__slide p-splide-infinity__slide">
+						<img src="../assets/img/img-slide05.webp" alt="ビル" width="1280" height="853" loading="lazy"
+							decoding="async">
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<script src="../assets/splide/splide.min.js"></script>
+	<script>
+		new Splide("#js-splide", {
+			type: 'loop',
+			fixedWidth: "200px",
+			gap: '20px',
+			arrows: false,
+			pagination: false,
+			autoplay: true,
+			interval: 0,
+			speed: 100000,
+		}).mount();
+	</script>
+</body>
+
+</html>
