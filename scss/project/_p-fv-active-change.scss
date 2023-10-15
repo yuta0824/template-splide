@@ -5,12 +5,12 @@
 	background: g.$cr-gray-light;
 }
 .p-fv-active-change__inner {
-	margin-inline: auto;
 	max-width: 1280px;
+	margin-inline: auto;
 }
 .p-fv-active-change__head {
-	text-align: center;
 	font-size: 18px;
+	text-align: center;
 
 	@include g.mq("md") {
 		font-size: 30px;

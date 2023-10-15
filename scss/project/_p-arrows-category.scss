@@ -11,28 +11,28 @@
 	}
 
 	svg {
-		border-radius: 50%;
-		background: g.$cr-gray;
-		fill: rgb(0, 0, 0);
-		padding: 0.5em;
-		height: 2.2em;
 		width: 2.2em;
+		height: 2.2em;
+		padding: 0.5em;
+		background: g.$cr-gray;
+		border-radius: 50%;
+		fill: rgb(0, 0, 0);
 	}
 
 	&::after {
-		content: "";
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		z-index: -1;
 		width: 200%;
 		height: 150%;
-		z-index: -1;
+		content: "";
+		transform: translate(-50%, -50%);
 	}
 
 	&:disabled {
-		opacity: 0;
 		display: none;
+		opacity: 0;
 	}
 }
 .p-arrows-category__arrow--prev {
